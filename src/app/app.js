@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'normalize.css'
-import './app.css'
-import Page from '@govuk-react/page'
-import BackLink from '@govuk-react/back-link'
-import { H1 } from '@govuk-react/heading'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { compose, map, path } from 'ramda'
+import { routes } from './routes'
+
+const createRoute = (route) => <Route key={route.path} path={route.path} component={route.component} />
+
+const Routes = compose(map(createRoute), path(['routes']))
 
 const App = () => (
-  <Page beforeChildren={<BackLink href="#" />}>
-    <H1>Page title</H1>
-  </Page>
+  <Router>
+    <Routes routes={routes} />
+  </Router>
 )
 
 ReactDOM.render(

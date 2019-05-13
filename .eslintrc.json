@@ -18,12 +18,15 @@
   },
   "plugins": [
     "react",
+    "react-hooks",
     "babel"
   ],
   "rules": {
     "no-invalid-this": 0,
     "babel/no-invalid-this": 1,
     "react/jsx-uses-vars": 1,
-    "react/jsx-uses-react": 1
+    "react/jsx-uses-react": 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
