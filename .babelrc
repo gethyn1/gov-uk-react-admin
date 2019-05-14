@@ -1,12 +1,6 @@
 {
   "presets": ["@babel/preset-react", "@babel/preset-env"],
   "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    ["import", { "libraryName": "antd", "style": "css" }]
-  ],
-  "env": {
-    "test": {
-      "plugins": ["dynamic-import-node"]
-    }
-  }
+    "@babel/plugin-syntax-dynamic-import"
+  ]
 }
