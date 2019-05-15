@@ -3,9 +3,9 @@ import { path } from 'ramda'
 const API_BASE = 'http://localhost:5000'
 const CALL_API = 'CALL_API'
 
-// TO DO: General tidy up and refactor
-// TO DO: test API service
-// TO DO: trigger meta status messages for network requests
+// TODO: General tidy up and refactor
+// TODO: test API service
+// TODO: trigger meta status messages for network requests
 const apiService = (store) => (next) => (action) => {
   const apiType = action[CALL_API]
 
