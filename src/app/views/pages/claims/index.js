@@ -1,1 +1,1 @@
-export { Claims } from './claims'
+export { container as Claims } from './container'

@@ -14,7 +14,7 @@ import * as types from './types'
 
 const entityHandlers = {
   [types.READ_CLAIMS_SUCCEEDED]: (state, action) => {
-    return action.payload.categories
+    return action.payload.claims
   }
 }
 
