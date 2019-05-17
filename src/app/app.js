@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom'
 import { compose, map, path } from 'ramda'
 import { routes } from './routes'
 
-const createRoute = (route) => <Route key={route.path} path={route.path} component={route.component} />
+const createRoute = (route) =>
+  <Route exact={route.exact} key={route.path} path={route.path} component={route.component} />
 
 const Routes = compose(map(createRoute), path(['routes']))
 

@@ -52,7 +52,8 @@ const createFetchMetaReducer = ({ types }) => {
   })
 }
 
-// TO DO: test createCrudMetaReducer()
+// TODO: test createCrudMetaReducer()
+// TODO: refactor to pass in any named field for async status and rename to asyncMetaReducer
 const createCrudMetaReducer = ({ create, read, update, remove }) => {
   return combineReducers({
     create: createFetchMetaReducer({ types: create }),

@@ -1,14 +1,9 @@
-import { CALL_API } from '../../middleware/api-service'
+import { createCallApiAction } from '../api-action-factory'
 import * as types from './types'
 
-const getClaims = () => ({
-  // TODO type is added as integreation test throws an error if type is undefined. Needs looking into
-  // TODO refactor to call api function
-  type: CALL_API,
-  [CALL_API]: {
-    endpoint: '/claims',
-    types: types.READ
-  }
+const getClaims = () => createCallApiAction({
+  endpoint: '/claims',
+  types: types.READ
 })
 
 export {
